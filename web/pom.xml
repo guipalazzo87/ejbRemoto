@@ -72,23 +72,6 @@
                                 <username>admin</username>
                                 <password>admin</password>
                             </user>
-                            <user>
-                                <username>admin-user</username>
-                                <password>admin</password>
-                                <groups>
-                                    <group>admin</group>
-                                    <group>user</group>
-                                </groups>
-                                <application-user>true</application-user>
-                            </user>
-                            <user>
-                                <username>default-user</username>
-                                <password>admin</password>
-                                <groups>
-                                    <group>user</group>
-                                </groups>
-                                <application-user>true</application-user>
-                            </user>
                         </users>
                     </add-user>
                 </configuration>
