@@ -37,9 +37,9 @@ public class Principal extends JFrame {
         inputPanel.add(jTextField2);
 
         somarButton.addActionListener(e -> {
-            var valora = Integer.parseInt(jTextField1.getText());
-            var valorb = Integer.parseInt(jTextField2.getText());
-            var result = cejb.somar(valora, valorb);
+            var valorA = Integer.parseInt(jTextField1.getText());
+            var valorB = Integer.parseInt(jTextField2.getText());
+            var result = cejb.somar(valorA, valorB);
             jTextArea.setText("Resultado: " + result);
         });
 

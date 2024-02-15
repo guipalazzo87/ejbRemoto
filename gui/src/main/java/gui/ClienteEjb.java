@@ -6,6 +6,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 public class ClienteEjb {
     public int somar(int a, int b) {
@@ -19,8 +20,9 @@ public class ClienteEjb {
             return beanRemote.somar(a, b);
 
         } catch (NamingException ex) {
-            System.out.println("ERRO");
-            ex.printStackTrace();
+            Logger logger = Logger.getLogger(ClienteEjb.class.getName());
+            logger.severe("Erro ao tentar fazer lookup do EJB");
+            logger.severe(ex.getMessage());
             return -1;
         }
     }
