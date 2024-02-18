@@ -1,0 +1,6 @@
+# Ignore everything
+**
+
+# Allow files and directories required for building the Docker image
+!/target/web.war
+!/Dockerfile
