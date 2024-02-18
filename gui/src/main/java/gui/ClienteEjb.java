@@ -1,6 +1,6 @@
 package gui;
 
-import lib.ICalculadora;
+import lib.Calculadora;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -16,7 +16,7 @@ public class ClienteEjb {
             props.put(Context.INITIAL_CONTEXT_FACTORY, "org.wildfly.naming.client.WildFlyInitialContextFactory");
             props.put(Context.PROVIDER_URL, "http-remoting://localhost:8080");
             InitialContext ejbRemoteContext = new InitialContext(props);
-            ICalculadora beanRemote = (ICalculadora) ejbRemoteContext.lookup("ejb:/web/EjbCalculadora!lib.ICalculadora");
+            Calculadora beanRemote = (Calculadora) ejbRemoteContext.lookup("ejb:/web/EjbCalculadora!lib.Calculadora");
             return beanRemote.somar(a, b);
 
         } catch (NamingException ex) {

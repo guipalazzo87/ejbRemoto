@@ -4,29 +4,29 @@ package jsf;
 import jakarta.ejb.EJB;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Named;
-import lib.ICalculadora;
+import lib.Calculadora;
 
 @Named(value = "jsfCalculadora")
 @RequestScoped
 public class JsfCalculadora {
 
     @EJB
-    private ICalculadora ejbCalculadora;
+    private Calculadora calculadoraBean;
 
     private int valorA;
     private int valorB;
     private int resultado;
 
     public void somar() {
-        resultado = ejbCalculadora.somar(valorA, valorB);
+        resultado = calculadoraBean.somar(valorA, valorB);
     }
 
-    public ICalculadora getEjbCalculadora() {
-        return ejbCalculadora;
+    public Calculadora getCalculadoraBean() {
+        return calculadoraBean;
     }
 
-    public void setEjbCalculadora(ICalculadora ejbCalculadora) {
-        this.ejbCalculadora = ejbCalculadora;
+    public void setCalculadoraBean(Calculadora calculadoraBean) {
+        this.calculadoraBean = calculadoraBean;
     }
 
     public int getValorA() {
